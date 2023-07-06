@@ -88,9 +88,9 @@ public class ReflectionUtils {
         Assert.notNull(fieldName, "fieldName");
 
         try {
-            return clazz.getField(fieldName);
+            return clazz.getDeclaredField(fieldName);
         } catch (NoSuchFieldException e) {
-            throw new ReflectionException("Field " + fieldName + " not found.");
+            throw new ReflectionException("Field " + clazz.getName() + "." + fieldName + " not found.");
         }
     }
 

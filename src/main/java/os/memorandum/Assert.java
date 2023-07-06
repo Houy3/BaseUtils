@@ -8,4 +8,5 @@ public class Assert {
             throw new NullPointerException(objectName + " cannot be null.");
         }
     }
+
 }
